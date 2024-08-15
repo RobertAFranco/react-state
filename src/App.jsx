@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import './App.css'
-import './ModeSwitcher'
+import React, { useState } from 'react';
+import './App.css';
+import ModeSwitcher from './ModeSwitcher'; // Ensure the correct path
 
 const App = () => {
   const [team, setTeam] = useState([]);
@@ -42,7 +42,10 @@ const App = () => {
 
   return (
     <div>
+      <ModeSwitcher />  {/* Render the ModeSwitcher at the top of the page */}
+      
       <h1>Zombie Fighters</h1>
+      
       <div className="team-info">
         <h2>Money: {money}</h2>
         <h2>Team Strength: {totalStrength}</h2>
@@ -85,6 +88,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
